@@ -1,4 +1,10 @@
 # Some code to remember
+### nodejs
+```
+// --watch restarts the process when an imported file is changed
+node --watch index.js
+```
+
 ### opencv
 ```js
 const emptyMat = new cv.Mat(500, 500, 24); // 24 for PNG
