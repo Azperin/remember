@@ -14,7 +14,7 @@ execSync(`texconv.exe "${ srcFullPath }" -y -ft png -o "${ outputDir }"`); // -f
 ```
 ### discord.js
 ```js
-// max file.length === 10, max total attachments size < 25MB
+// max files.length === 10, max total attachments size < 25MB
 const HOOK = new Discord.WebhookClient({ url: 'https://discord.com/api/webhooks/..'});
 HOOK.send({ files: [{ attachment: "<path/to/file.txt>", name: "attach_name" }] }); 
 ```
