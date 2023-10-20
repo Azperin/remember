@@ -10,7 +10,8 @@ cv.imwrite("path/to/image.png", emptyMat,  [cv.IMWRITE_PNG_COMPRESSION, 0] ); //
 ```
 ### texconv (dds convert)
 ```js
-execSync(`texconv.exe "${ srcFullPath }" -y -ft png -o "${ outputDir }"`); // -f FP16 
+// in case of errors add flag -f FP16 
+execSync(`texconv.exe "${ srcFullPath }" -y -ft png -o "${ outputDir }"`); 
 ```
 ### discord.js
 ```js
