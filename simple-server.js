@@ -11,11 +11,11 @@ const server = http.createServer((req, res) => {
 	
 	let filePath = './owntree' + req.url;
 	let contentType = 'text/html';
-	const extname = filePath.split('.').at(-1);
 	
 	if (filePath === './owntree/') {
 		 filePath = './owntree/index.html';
 	};
+	const extname = filePath.split('.').at(-1);
 	
 	switch (extname) {
         case 'js':
