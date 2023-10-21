@@ -25,3 +25,9 @@ execSync(`texconv.exe "${ srcFullPath }" -y -ft png -o "${ outputDir }"`);
 const HOOK = new Discord.WebhookClient({ url: 'https://discord.com/api/webhooks/..'});
 HOOK.send({ files: [{ attachment: "<path/to/file.txt>", name: "attach_name" }] }); 
 ```
+### Convert bk2 files to webm
+1. Unpack .bk2 video as PNG sequence using RADtools
+2. Create .apng file with Apng assembler
+3. Assemble .webm file with FFMPEG `ffmpeg -i converted_bk_file.apng -c:v libvpx -crf 4 -b:v 20M -auto-alt-ref 0 output.webm`
+Can skip apng creation using straight FFMPEG, but output will be twice the size 
+`ffmpeg -framerate 60 -i "file%03d.png" -c:v libvpx-vp9 -pix_fmt yuva420p -b:v 20M -auto-alt-ref 0 output.webm`
