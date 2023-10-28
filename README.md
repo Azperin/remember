@@ -19,6 +19,7 @@ cv.imwrite("path/to/image.png", emptyMat,  [cv.IMWRITE_PNG_COMPRESSION, 0] ); //
 // in case of errors add flag -f FP16 
 execSync(`texconv.exe "${ srcFullPath }" -y -ft png -o "${ outputDir }"`); 
 ```
+`texconv.exe -r:keep "R:\ggpk\extracted\folder\*.dds" -ft png -o s -y`
 ### discord.js
 ```js
 // max files.length === 10, max total attachments size < 25MB
