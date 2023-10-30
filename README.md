@@ -3,13 +3,14 @@
 ```js
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js"></script>
 function convertPobStringToXML(base64_pob_string) {
-	// not url, base64 content itself
-	const str = base64_pob_string.replaceAll('-', '+').replaceAll('_','/');
-	const strDecoded = atob(str);
-	const binData = new Uint8Array(strDecoded.split('').map((x) => x.charCodeAt(0)));
-	const strDecompressed = pako.inflate(binData);
-	const xml = String.fromCharCode.apply(null, strDecompressed); // new Uint16Array(strDecompressed) for utf16
-	return xml;
+  // not url, base64 content itself
+  const str = base64_pob_string.replaceAll('-', '+').replaceAll('_','/');
+  const strDecoded = atob(str);
+  const binData = new Uint8Array(strDecoded.split('').map((x) => x.charCodeAt(0)));
+  const strDecompressed = pako.inflate(binData);
+  // new Uint16Array(strDecompressed) for utf16
+  const xml = String.fromCharCode.apply(null, strDecompressed); 
+  return xml;
 }
 ```
 
