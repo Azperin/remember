@@ -1,7 +1,7 @@
 # Some code to remember
 ### Path of Building string convert to XML
+`<script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js"></script>`
 ```js
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js"></script>
 function convertPobStringToXML(base64_pob_string) {
   // not url, base64 content itself
   const str = base64_pob_string.replaceAll('-', '+').replaceAll('_','/');
