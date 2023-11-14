@@ -1,4 +1,16 @@
 # Some code to remember
+### Factorio blueprint parse
+`<script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js"></script>`
+```js
+const BPstr = '===='; // blueprint base64 string
+const base64 = BPstr.substring(1);
+const strDecoded = atob(base64); // length%4 should be = 0, else add more ====
+const binData = new Uint8Array(strDecoded.split('').map((x) => x.charCodeAt(0)));
+const strDecompressed = pako.inflate(binData);
+const json = JSON.parse(String.fromCharCode.apply(null, strDecompressed));
+console.log(json);
+```
+
 ### Path of Building string convert to XML
 `<script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js"></script>`
 ```js
