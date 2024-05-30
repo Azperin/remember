@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Remember Things"
-  text: "Trying to deploy"
+  text: "Trying to deploy second time"
   tagline: My great project tagline
   actions:
     - theme: brand
