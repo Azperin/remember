@@ -6,7 +6,7 @@ export default defineConfig({
     title: "Remember Things",
     description: "Description to change later",
     head: [
-        ['link', { rel: 'icon', type: 'image/x-icon', href: '/remember/favicon.ico' }],
+        ['link', { rel: 'icon', type: 'image/x-icon', href: '/remember/assets/favicon.ico' }],
     ],
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
