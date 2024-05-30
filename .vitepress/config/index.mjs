@@ -2,12 +2,12 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+    base: '/remember/',
     title: "Remember Things",
     description: "Description to change later",
     head: [
-        ['link', { rel: 'icon', href: '/favicon.ico' }]
+        ['link', { rel: 'icon', type: 'image/x-icon', href: '/remember/favicon.ico' }],
     ],
-    base: '/remember/',
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
         
