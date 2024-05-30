@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Remember Things",
   description: "Description to change later",
+  base: '/remember/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
